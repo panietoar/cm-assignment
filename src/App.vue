@@ -8,7 +8,7 @@
       <p>See the README file for assignment requirements.</p>
 
       <div class="premium-recipe-wrapper">
-        <PremiumRecipeCard />
+        <PremiumRecipeCard :recipe="chickenRecipe" />
       </div>
     </div>
   </div>
@@ -21,11 +21,41 @@ export default {
   name: "App",
   components: {
     PremiumRecipeCard
+  },
+  data() {
+    return {
+      chickenRecipe: {
+        name: "Low Carb Thai Chicken Curry With Coconut Cauliflower Rice",
+        cookingTime: 24,
+        calories: 489,
+        nutrients: {
+          carbs: 20,
+          proteins: 16,
+          fats: 6
+        },
+        rating: 3,
+        totalRatings: 200,
+        favorite: true,
+        image: require("@/assets/chicken-thai.jpg"),
+      }
+    }
   }
 };
 </script>
 
 <style>
+:root {
+  --primary-font-color: #393C40;
+  --heading-font-color: #0C0C0A;
+  --grey-nutrients: #6F737A;
+
+  --carbs-red: #F94642;
+  --proteins-blue: #3177BB;
+  --fats-yellow: #FDA120;
+
+  --ratings-green: #1CA677;
+}
+
 #app {
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -56,5 +86,6 @@ export default {
   margin-top: 100px;
   border: 2px dashed red;
   padding: 16px;
+  background-color: #eee;
 }
 </style>
