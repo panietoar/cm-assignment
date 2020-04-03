@@ -82,6 +82,16 @@ export default {
 
 <style lang="scss">
 .premium-recipe-card {
+  --primary-font-color: #393c40;
+  --heading-font-color: #0c0c0a;
+  --grey-nutrients: #6f737a;
+
+  --carbs-red: #f94642;
+  --proteins-blue: #3177bb;
+  --fats-yellow: #fda120;
+
+  --ratings-green: #1ca677;
+
   background-color: #fff;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);

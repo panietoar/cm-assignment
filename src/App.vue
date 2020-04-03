@@ -44,18 +44,6 @@ export default {
 </script>
 
 <style>
-:root {
-  --primary-font-color: #393c40;
-  --heading-font-color: #0c0c0a;
-  --grey-nutrients: #6f737a;
-
-  --carbs-red: #f94642;
-  --proteins-blue: #3177bb;
-  --fats-yellow: #fda120;
-
-  --ratings-green: #1ca677;
-}
-
 #app {
   font-family: "proxima-nova", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
