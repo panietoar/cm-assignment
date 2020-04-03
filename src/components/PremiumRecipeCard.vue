@@ -1,5 +1,5 @@
 <template>
-  <div class="premium-recipe-card" @click="clicked">
+  <article class="premium-recipe-card" @click="clicked">
     <div class="card-image" :style="imageStyle">
       <div class="card-image__overlay"></div>
       <img
@@ -20,7 +20,7 @@
       </div>
     </div>
     <div class="card-info">
-      <h3 class="card-info__heading">{{ recipe.name }}</h3>
+      <h3 class="card-info__heading" ref="recipeName">{{ recipe.name }}</h3>
       <div class="card-info__ratings">
         <!-- Copied from my own authored nativescript-vue plugin https://github.com/panietoar/nativescript-vue-star-rating -->
         <StarRating
@@ -33,6 +33,7 @@
         <span class="ratings-total"> {{ recipe.totalRatings }} ratings </span>
       </div>
       <div class="recipe-details">
+        <!-- This section can be extracted to a component for reuse in <RecipeOfTheDay> -->
         <div class="recipe-details__general">
           <div class="details details__cook-time">
             <img src="@/assets/clock.svg" alt="" />
@@ -43,16 +44,19 @@
             {{ recipe.calories | caloriesConverter(energyUnits) }}
           </div>
         </div>
+        <!-- end of section -->
         <div class="recipe-details__nutrients">
           <Nutrients :nutrients="recipe.nutrients" />
         </div>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 <script>
 import Nutrients from "./RecipeNutrients.vue";
 import StarRating from "./starRating/StarRating.vue";
+
+import lineClamp from "line-clamp";
 
 export default {
   name: "emiumRecipeCard",
@@ -82,6 +86,9 @@ export default {
     clicked() {
       this.$emit("click");
     }
+  },
+  mounted() {
+    lineClamp(this.$refs.recipeName, 2);
   }
 };
 </script>
