@@ -1,5 +1,5 @@
 <template>
-  <div class="premium-recipe-card">
+  <div class="premium-recipe-card" @click="clicked">
     <div class="card-image" :style="imageStyle">
       <div class="card-image__overlay"></div>
       <img
@@ -75,6 +75,11 @@ export default {
       return {
         backgroundImage: `url('${this.recipe.image}')`
       };
+    }
+  },
+  methods: {
+    clicked() {
+      this.$emit('click');
     }
   }
 };
