@@ -21,11 +21,11 @@ Vue.filter("cookingTime", value => {
 
 Vue.filter("caloriesConverter", (value, unit) => {
   let total;
-
+  
   if (unit === 'kilojoules') {
-    total = value * 4,184;
+    total = parseFloat(value) * 4.184;
 
-    return `${total.toLocaleString()} kJ`;
+    return `${total.toFixed(0)} kJ`;
   }
   return `${ value.toString() } Calories`;
 });

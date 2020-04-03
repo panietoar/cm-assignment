@@ -2,8 +2,8 @@
   <div class="premium-recipe-card">
     <div class="card-image" :style="imageStyle">
       <div class="card-image__overlay"></div>
-      <img class="card-image__favorite" src="@/assets/heart-filled.svg" alt="" v-if="recipe.favorite">
-      <img class="card-image__favorite" src="@/assets/heart-outline.svg" alt="" v-else>
+      <img class="card-image__favorite card-image__favorite--filled" src="@/assets/heart-filled.svg" alt="" v-if="recipe.favorite">
+      <img class="card-image__favorite card-image__favorite--outline" src="@/assets/heart-outline.svg" alt="" v-else>
       <div class="card-image__badge">
         <img src="@/assets/trophy.svg">
         <span>Premium Recipe</span>
