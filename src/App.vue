@@ -36,24 +36,24 @@ export default {
         rating: 3,
         totalRatings: 200,
         favorite: true,
-        image: require("@/assets/chicken-thai.jpg"),
+        image: require("@/assets/chicken-thai.jpg")
       }
-    }
+    };
   }
 };
 </script>
 
 <style>
 :root {
-  --primary-font-color: #393C40;
-  --heading-font-color: #0C0C0A;
-  --grey-nutrients: #6F737A;
+  --primary-font-color: #393c40;
+  --heading-font-color: #0c0c0a;
+  --grey-nutrients: #6f737a;
 
-  --carbs-red: #F94642;
-  --proteins-blue: #3177BB;
-  --fats-yellow: #FDA120;
+  --carbs-red: #f94642;
+  --proteins-blue: #3177bb;
+  --fats-yellow: #fda120;
 
-  --ratings-green: #1CA677;
+  --ratings-green: #1ca677;
 }
 
 #app {

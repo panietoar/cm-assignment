@@ -4,7 +4,6 @@ import RecipeNutrients from "@/components/RecipeNutrients.vue";
 import "@/lib/fiters";
 
 describe("RecipeNutrients.vue", () => {
-  
   describe("given I pass the sample props", () => {
     const wrapper = shallowMount(RecipeNutrients, {
       propsData: {
@@ -23,11 +22,10 @@ describe("RecipeNutrients.vue", () => {
     test("it renders the protein data", () => {
       expect(wrapper.find(".nutrient--proteins").text()).toBe("16g");
     });
-  
+
     test("it renders the fats data", () => {
       expect(wrapper.find(".nutrient--fats").text()).toBe("6g");
     });
-
   });
 
   describe("given I pass values on the thousands", () => {

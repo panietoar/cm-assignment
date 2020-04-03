@@ -2,29 +2,43 @@
   <div class="premium-recipe-card">
     <div class="card-image" :style="imageStyle">
       <div class="card-image__overlay"></div>
-      <img class="card-image__favorite card-image__favorite--filled" src="@/assets/heart-filled.svg" alt="" v-if="recipe.favorite">
-      <img class="card-image__favorite card-image__favorite--outline" src="@/assets/heart-outline.svg" alt="" v-else>
+      <img
+        class="card-image__favorite card-image__favorite--filled"
+        src="@/assets/heart-filled.svg"
+        alt=""
+        v-if="recipe.favorite"
+      />
+      <img
+        class="card-image__favorite card-image__favorite--outline"
+        src="@/assets/heart-outline.svg"
+        alt=""
+        v-else
+      />
       <div class="card-image__badge">
-        <img src="@/assets/trophy.svg">
+        <img src="@/assets/trophy.svg" />
         <span>Premium Recipe</span>
       </div>
     </div>
     <div class="card-info">
       <h3 class="card-info__heading">{{ recipe.name }}</h3>
       <div class="card-info__ratings">
-        <StarRating :value="recipe.rating" fillColor="#FDA01E" emptyColor="#D5D7D9" width="12" height="20"/>
-        <span class="ratings-total">
-          {{ recipe.totalRatings }} ratings
-        </span>
+        <StarRating
+          :value="recipe.rating"
+          fillColor="#FDA01E"
+          emptyColor="#D5D7D9"
+          width="12"
+          height="20"
+        />
+        <span class="ratings-total"> {{ recipe.totalRatings }} ratings </span>
       </div>
       <div class="recipe-details">
         <div class="recipe-details__general">
           <div class="details details__cook-time">
-            <img src="@/assets/clock.svg" alt="">
+            <img src="@/assets/clock.svg" alt="" />
             {{ recipe.cookingTime | cookingTime }}
           </div>
           <div class="details details__calories">
-            <img src="@/assets/cals.svg" alt="">
+            <img src="@/assets/cals.svg" alt="" />
             {{ recipe.calories | caloriesConverter(energyUnits) }}
           </div>
         </div>
@@ -60,17 +74,17 @@ export default {
     imageStyle() {
       return {
         backgroundImage: `url('${this.recipe.image}')`
-      }
+      };
     }
   }
-}
+};
 </script>
 
 <style lang="scss">
 .premium-recipe-card {
   background-color: #fff;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, .2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   cursor: pointer;
   max-width: 340px;
 
@@ -81,12 +95,17 @@ export default {
     background-position: center center;
     background-size: cover;
     position: relative;
-    transition: all .3s;
+    transition: all 0.3s;
 
     &__overlay {
       width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(22, 27, 35, 0.2) 70.94%, rgba(26, 29, 34, 0.79) 106.25%);
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.0001) 0%,
+        rgba(22, 27, 35, 0.2) 70.94%,
+        rgba(26, 29, 34, 0.79) 106.25%
+      );
     }
 
     &__favorite {
@@ -97,7 +116,7 @@ export default {
 
     &__badge {
       align-items: center;
-      background-color: rgba(255, 255, 255, .4);
+      background-color: rgba(255, 255, 255, 0.4);
       border-radius: 10px;
       bottom: 8px;
       color: white;
@@ -183,6 +202,5 @@ export default {
       filter: opacity(80%);
     }
   }
-
 }
 </style>

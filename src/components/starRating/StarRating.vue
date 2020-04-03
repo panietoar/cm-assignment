@@ -69,8 +69,8 @@ export default {
 </script>
 
 <style lang="scss">
-  .star-rating {
-    display: flex;
-    justify-content: space-between;
-  }
+.star-rating {
+  display: flex;
+  justify-content: space-between;
+}
 </style>

@@ -37,9 +37,7 @@ export default {
       return {
         width: `${this.width}px`,
         height: `${this.height}px`,
-        background: `linear-gradient(90deg, ${this.fillColor} ${
-          this.percentage
-        }, ${this.emptyColor} ${this.percentage})`
+        background: `linear-gradient(90deg, ${this.fillColor} ${this.percentage}, ${this.emptyColor} ${this.percentage})`
       };
     },
     percentage() {
@@ -50,7 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.star{
+.star {
   clip-path: polygon(
     50% 0%,
     61% 35%,
