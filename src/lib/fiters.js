@@ -3,7 +3,7 @@ import Vue from "vue";
 Vue.filter("engUnits", value => {
   if (value > 1000) {
     value /= 1000;
-   return `${value.toString()} k`;
+   return `${value.toString()}k`;
   }
   return value.toString();
 });
