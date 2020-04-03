@@ -22,6 +22,7 @@
     <div class="card-info">
       <h3 class="card-info__heading">{{ recipe.name }}</h3>
       <div class="card-info__ratings">
+        <!-- Copied from my own authored nativescript-vue plugin https://github.com/panietoar/nativescript-vue-star-rating -->
         <StarRating
           :value="recipe.rating"
           fillColor="#FDA01E"
@@ -79,7 +80,7 @@ export default {
   },
   methods: {
     clicked() {
-      this.$emit('click');
+      this.$emit("click");
     }
   }
 };

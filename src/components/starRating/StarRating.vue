@@ -20,7 +20,7 @@ export default {
     value: {
       type: Number,
       required: true,
-      value: 0
+      default: 0
     },
     width: {
       type: [String, Number],
