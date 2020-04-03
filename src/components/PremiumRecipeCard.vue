@@ -12,7 +12,7 @@
     <div class="card-info">
       <h3 class="card-info__heading">{{ recipe.name }}</h3>
       <div class="card-info__ratings">
-        <!-- Star rating -->
+        <StarRating :value="recipe.rating" fillColor="#FDA01E" emptyColor="#D5D7D9" width="12" height="20"/>
         <span class="ratings-total">
           {{ recipe.totalRatings }} ratings
         </span>
